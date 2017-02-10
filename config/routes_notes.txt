@@ -1,0 +1,7 @@
+The left most column says articles. This is the prefix of the path. The router will provide two methods to us using that name, articles_path and articles_url. The _path version uses a relative path while the _url version uses the full URL with protocol, server, and path. The _path version is always preferred.
+
+The second column, here GET, is the HTTP verb for the route. Web browsers typically submit requests with the verbs GET or POST. In this column, you’ll see other HTTP verbs including PUT and DELETE which browsers don’t actually use. We’ll talk more about those later.
+
+The third column is similar to a regular expression which is matched against the requested URL. Elements in parentheses are optional. Markers starting with a : will be made available to the controller with that name. In our example line, /articles(.:format) will match the URLs /articles/, /articles.json, /articles and other similar forms.
+
+The fourth column is where the route maps to in the applications. Our example has articles#index, so requests will be sent to the index method of the ArticlesController class.
